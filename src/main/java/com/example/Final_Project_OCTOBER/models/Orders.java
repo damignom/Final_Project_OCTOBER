@@ -11,8 +11,8 @@ public class Orders {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Date date;
-    private User userId;
-    private Product productId;
-    private OrderStatus orderStatusId;
+    //private User userId;
+    //private Product productId;
+    //private OrderStatus orderStatusId;
 
 }
