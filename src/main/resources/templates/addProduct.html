@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="addProduct">
+            <input type="text" name="productName" placeholder="Введите название продукта"/>
+            <select class="form-control" id="category" name="productType">
+                <option th:each="category : ${productTypes}" th:text="${category.typeName}" th:value="${category.id}"></option>
+            </select>
+            <input type="number" name="productPrice" placeholder="Введите цену"/>
+            <button type="submit" class="btn btn-success">Добавит продукт</button>
+        </form>
+    </div>
+</body>
+</html>
