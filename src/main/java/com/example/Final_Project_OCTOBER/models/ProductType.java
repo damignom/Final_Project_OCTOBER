@@ -15,4 +15,27 @@ public class ProductType {
 
     @OneToMany(mappedBy = "productType", cascade = CascadeType.ALL)
     private List<Product> products = new ArrayList<>();
+
+    public ProductType(String typeName) {
+        this.typeName = typeName;
+    }
+
+    public ProductType() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTypeName() {
+        return typeName;
+    }
+
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
+    }
 }

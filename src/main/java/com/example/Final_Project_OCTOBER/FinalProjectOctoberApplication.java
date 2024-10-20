@@ -14,8 +14,8 @@ public class FinalProjectOctoberApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FinalProjectOctoberApplication.class, args);
 	}
-	@GetMapping("/hello")
+	/*@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
 		return String.format("Hello %s!", name);
-	}
+	}*/
 }
