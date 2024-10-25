@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация и Регистрация</title>
+    <link rel="stylesheet" href="../static/css/styles.css"/>
+    <!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous"-->
+</head>
+<body>
+<div class="container">
+    <h1>Добро пожаловать!</h1>
+    <div class="form-container">
+        <form id="login-form">
+            <h2>Авторизация</h2>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit">Войти</button>
+            <p>Нет аккаунта? <a href="#register">Зарегистрироваться</a></p>
+        </form>
+
+        <form id="register-form" style="display: none;">
+            <h2>Регистрация</h2>
+            <input type="text" placeholder="Имя" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Пароль" required>
+            <button type="submit">Зарегистрироваться</button>
+            <p>Уже есть аккаунт? <a href="#login">Войти</a></p>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Простой переключатель между формами
+    document.querySelector('a[href="#register"]').addEventListener('click', function() {
+        document.getElementById('login-form').style.display = 'none';
+        document.getElementById('register-form').style.display = 'block';
+    });
+
+    document.querySelector('a[href="#login"]').addEventListener('click', function() {
+        document.getElementById('login-form').style.display = 'block';
+        document.getElementById('register-form').style.display = 'none';
+    });
+</script>
+</body>
+</html>

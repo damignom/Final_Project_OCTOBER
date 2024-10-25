@@ -1,0 +1,77 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер для форм */
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Заголовок страницы */
+.header {
+    background-color: #1e1e1e;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Заголовок сайта */
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #ffffff;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff5722; /* Цвет при наведении */
+}
+
+/* Основное содержимое */
+.main-content {
+    padding: 20px;
+}
+
+/* Карточки товаров и элементы корзины */
+.product-card, .cart-item {
+    background-color: #1e1e1e;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Тень */
+    transition: transform 0.2s; /* Анимация при наведении */
+}
+
+.product-card:hover, .cart-item:hover {
+    transform: translateY(-5px); /* Подъем карточки при наведении */
+}
+
+/* Итоговая сумма */
+.total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Кнопка оформления заказа */
+.checkout-button {
+    background-color: #ff5722; /* Цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 5px; /* Закругленные углы кнопки */
