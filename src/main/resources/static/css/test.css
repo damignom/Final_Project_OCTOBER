@@ -91,6 +91,8 @@ footer {
     background-color: #f1f1f1;
 }
 
+
+/*=============carousel styles==================*/
 .carousel {
     position: relative;
     max-width: 600px; /* Максимальная ширина карусели */
@@ -127,11 +129,146 @@ footer {
     right: 10px; /* Положение кнопки "Вперед" */
 }
 
-/* Стили для кнопки панели администратора */
+/*================Стили для кнопки панели администратора==============*/
 .admin-btn {
     background-color: #cc3359; /* Синий цвет фона для панели админа */
 }
 
 .admin-btn:hover {
     background-color: #cc3333; /* Темно-синий цвет при наведении */
+}
+
+
+/*======catalog styles=======*/
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку */
+    justify-content: center; /* Центрирование элементов */
+    margin-top: 20px; /* Отступ сверху для визуального разделения */
+}
+
+.catalog-item {
+    background-color: #e6e6e6; /* Цвет фона карточки */
+    border: 1px solid #ddd; /* Рамка карточки */
+    border-radius: 5px; /* Скругление углов */
+    margin: 10px; /* Отступ между карточками */
+    padding: 15px; /* Отступ внутри карточки */
+    text-align: center; /* Центрирование текста */
+    width: 500px; /* Ширина карточки */
+    height: 350px; /* Высота карточки */
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов внутри карточки */
+}
+
+.catalog-item img {
+    max-width: 100%; /* Изображение не превышает ширину карточки */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+}
+
+.catalog-item h2 {
+    font-size: 18px; /* Размер заголовка товара */
+}
+
+.catalog-item p {
+    font-size: 14px; /* Размер описания товара */
+}
+
+/* Стили для контейнера кнопки */
+.btn-container {
+    margin-top: auto; /* Отталкивает кнопку вниз, занимая оставшееся пространство */
+}
+
+.btn-buy {
+    background-color: #d22d2d; /* Серый цвет фона кнопок */
+    color: white; /* Цвет текста */
+    padding: 10px 15px; /* Отступы внутри кнопок */
+    border-radius: 5px; /* Скругление углов */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.btn-buy:hover {
+    background-color: #e61919;
+}
+
+.btn-edit {
+     background-color: #0080ff; /* Серый цвет фона кнопок */
+     color: white; /* Цвет текста */
+     padding: 10px 15px; /* Отступы внутри кнопок */
+     border-radius: 5px; /* Скругление углов */
+     text-decoration: none; /* Убираем подчеркивание */
+}
+
+.btn-edit:hover {
+    background-color: #0000ff;
+}
+
+
+/*==============cart styles=============*/
+
+.cart {
+    margin-top: 20px; /* Отступ сверху для визуального разделения */
+}
+
+.cart-item {
+    display: flex; /* Горизонтальное расположение элементов */
+    align-items: center; /* Вертикальное центрирование */
+    background-color: #f9f9f9; /* Цвет фона карточки */
+    border: 1px solid #ddd; /* Рамка карточки */
+    border-radius: 5px; /* Скругление углов */
+    margin-bottom: 10px; /* Отступ между товарами */
+    padding: 15px; /* Отступ внутри карточки */
+}
+
+.cart-item img {
+    max-width: 100px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin-right: 15px; /* Отступ справа от изображения */
+}
+
+.item-details {
+    flex-grow: 1; /* Позволяет элементам занимать оставшееся пространство */
+}
+
+.item-quantity {
+    margin-top: 10px; /* Отступ сверху для визуального разделения */
+}
+
+.item-price {
+    font-weight: bold; /* Жирный шрифт для цены */
+}
+
+.remove-btn {
+    background-color: #0080ff; /* Серый цвет фона кнопок */
+    color: white; /* Цвет текста */
+    padding: 10px 15px; /* Отступы внутри кнопок */
+    border-radius: 5px; /* Скругление углов */
+    text-decoration: none;
+
+}
+
+.remove-btn:hover {
+    background-color: #ff0000; /* Темно-красный цвет при наведении */
+}
+
+.cart-total {
+    margin-top: 20px; /* Отступ сверху для визуального разделения */
+}
+
+.checkout-btn {
+    background-color: #995cd6; /* Синий цвет фона для кнопки оформления заказа */
+    color: white; /* Цвет текста */
+    padding: 10px 15px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Скругление углов */
+    cursor: pointer; /* Курсор в виде указателя при наведении */
+}
+
+.checkout-btn:hover {
+    background-color: #994ce6; /* Темно-синий цвет при наведении */
+}
+
+.btn-container {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение кнопок */
 }
