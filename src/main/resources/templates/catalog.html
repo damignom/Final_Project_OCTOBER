@@ -9,13 +9,16 @@
 <body>
 <header>
     <nav class="navbar">
-        <div class="site-title">ПромоНазвание</div>
+        <div class="site-title">
+            <a href="/">ПромоНазвание</a>
+        </div>
         <div class="center-buttons">
-            <a href="#action1" class="center-btn">Каталог</a>
+            <a href="/catalog" class="center-btn">Каталог</a>
             <a href="#action2" class="center-btn">Создать свой бампер!</a>
-            <a href="#action3" class="center-btn">Корзина</a>
+            <a href="/cart" class="center-btn">Корзина</a>
         </div>
         <div class="auth-buttons">
+            <a href="/product" class="btn admin-btn">Панель администратора</a>
             <a href="#login" class="btn">Вход</a>
             <a href="#register" class="btn">Регистрация</a>
 
@@ -27,35 +30,16 @@
     <h1 align="center">Каталог товаров</h1>
     <p align="center">Здесь вы найдете информацию об интересующем вас продукте</p>
     <!-- Каталог товаров -->
-    <div class="catalog">
+    <div class="catalog" th:each="product : ${products}">
         <div class="catalog-item">
-            <img src="images/loudspeaker.png" alt="Товар 1">
-            <h2>Товар 1</h2>
-            <p>Описание товара 1.</p>
+            <img th:src = "@{'/img/' + ${product.productFilename}} " width="25%" height="25%">
+            <h2 th:text = "${product.productName}"></h2>
+            <p th:text = "${product.getProductType()}"></p>
             <div class="btn-container">
                 <a href="#buy1" class="btn-buy">Добавить в корзину</a>
                 <a href="#edit" class="btn-edit">Кастомизировать</a>
             </div>
         </div>
-        <div class="catalog-item">
-            <img src="images/pizza.png" alt="Товар 2">
-            <h2>Товар 2</h2>
-            <p>Описание товара 2.</p>
-            <div class="btn-container">
-                <a href="#buy2" class="btn-buy">Добавить в корзину</a>
-                <a href="#edit" class="btn-edit">Кастомизировать</a>
-            </div>
-        </div>
-        <div class="catalog-item">
-            <img src="images/puzzle.png" alt="Товар 3">
-            <h2>Товар 3</h2>
-            <p>Описание товара 3.</p>
-            <div class="btn-container">
-                <a href="#buy3" class="btn-buy">Добавить в корзину</a>
-                <a href="#edit" class="btn-edit">Кастомизировать</a>
-            </div>
-        </div>
-        <!-- Добавьте больше товаров по необходимости -->
     </div>
 </main>
 

@@ -9,14 +9,16 @@
 <body>
 <header>
   <nav class="navbar">
-    <div class="site-title">ПромоНазвание</div>
+    <div class="site-title">
+      <a href="/">ПромоНазвание</a>
+    </div>
     <div class="center-buttons">
-      <a href="#action1" class="center-btn">Каталог</a>
+      <a href="/catalog" class="center-btn">Каталог</a>
       <a href="#action2" class="center-btn">Создать свой бампер!</a>
-      <a href="#action3" class="center-btn">Корзина</a>
+      <a href="/cart" class="center-btn">Корзина</a>
     </div>
     <div class="auth-buttons">
-      <a href="#admin" class="btn admin-btn">Панель администратора</a>
+      <a href="/product" class="btn admin-btn">Панель администратора</a>
       <a href="#login" class="btn">Вход</a>
       <a href="#register" class="btn">Регистрация</a>
 
@@ -25,18 +27,29 @@
 </header>
 
 <main>
-
   <!-- Карусель изображений -->
-  <div class="carousel">
-    <div class="carousel-images">
-      <img src="images/loudspeaker.png" alt="Loudspeaker">
-      <img src="images/puzzle.png" alt="Puzzle">
-      <img th:src="@{images/pizza.png}" alt="Pizza">
-    </div>
-    <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
-  </div>
+  <div class="container mt-5">
+    <h1>Карусель изображений</h1>
 
+    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img th:src= "@{'/img/' + 2d9f45d4-671c-4828-9807-17b032e4b401.images.jpeg}" width="125%" height="125%">
+        </div>
+        <div class="carousel-item" th:each="product : ${products}">
+          <img th:src = "@{'/img/' + ${product.productFilename}} " width="125%" height="125%">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
 
 </main>
 
@@ -44,6 +57,5 @@
   <p>&copy; 2024 itStepProject</p>
 </footer>
 
-<script type="text/javascript" th:src="@{/js/main.js}"></script>
 </body>
 </html>
