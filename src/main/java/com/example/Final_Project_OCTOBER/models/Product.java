@@ -16,6 +16,10 @@ public class Product {
     @JoinColumn(name = "product_type_id")
     private ProductType productType;
 
+    private String productFilename;
+
+
+
     private Long productPrice;
 
     @ManyToMany(mappedBy = "products", cascade = CascadeType.ALL)
@@ -38,11 +42,19 @@ public class Product {
         return productName;
     }
 
-    public ProductType getProductType() {
-        return productType;
+    public String getProductType() {
+        return productType.getTypeName();
     }
 
     public Long getProductPrice() {
         return productPrice;
+    }
+
+    public String getProductFilename() {
+        return productFilename;
+    }
+
+    public void setProductFilename(String productFilename) {
+        this.productFilename = productFilename;
     }
 }

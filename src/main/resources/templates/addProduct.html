@@ -2,18 +2,68 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить товар</title>
+    <link rel="stylesheet" th:href="@{/css/addProductStyles.css}"/>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
 </head>
 <body>
-    <div>
-        <form method="post" action="addProduct">
-            <input type="text" name="productName" placeholder="Введите название продукта"/>
-            <select class="form-control" id="category" name="productType">
-                <option th:each="category : ${productTypes}" th:text="${category.typeName}" th:value="${category.id}"></option>
-            </select>
-            <input type="number" name="productPrice" placeholder="Введите цену"/>
-            <button type="submit" class="btn btn-success">Добавит продукт</button>
-        </form>
-    </div>
+<header class="header">
+    <h1>Интернет-магазин</h1>
+    <nav>
+        <button class="create-button" href="/">Главная</button>
+        <a href="/">Каталог</a>
+        <a href="/">Корзина</a>
+        <a href="/login">Войти</a>
+    </nav>
+</header>
+<div class="container">
+    <h1>Добавить товар</h1>
+    <form id="add-product-form" class="form-container" method="post" enctype="multipart/form-data" th:action="@{/product/addProduct}">
+        <label for="product-name">Название товара:</label>
+        <input type="text" id="product-name" name="productName" placeholder="Введите название товара" required>
+
+        <label for="product-type">Тип товара:</label>
+        <select id="product-type" name="productType" required>
+            <option th:each="category : ${productTypes}" th:text="${category.typeName}" th:value="${category.id}">
+            </option>
+        </select>
+        <div class="file-upload-container">
+        <label for="product-image">Изображение товара</label>
+        <input type="file" id="product-image" name="productFile"  required>
+        </div>
+        <label for="product-price">Цена:</label>
+        <input type="number" id="product-price" name="productPrice" placeholder="Введите цену" required>
+        <button type="submit" class="submit-button">Добавить товар</button>
+    </form>
+</div>
+<div class="container">
+    <h1>Текущий список товаров</h1>
+    <table class="product-table">
+        <tr>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Тип</th>
+            <th>Цена</th>
+            <th>Файл</th>
+            <th>Удалить</th>
+        </tr>
+        <tr th:each="product : ${products}">
+            <td th:text = "${product.id}"></td>
+            <td th:text = "${product.productName}"></td>
+            <td th:text = "${product.getProductType()}"></td>
+            <td th:text = "${product.productPrice}"></td>
+            <td>
+                <img th:src = "@{'/img/' + ${product.productFilename}} " width="125%" height="125%">
+            </td>
+            <td>
+                <form method="post" th:action="@{/product/deleteProduct}">
+                <button class="delete-button" th:value="${product.id}" name="productId" >x</button>
+                </form>
+            </td>
+
+        </tr>
+    </table>
+</div>
 </body>
 </html>
