@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навигационная панель</title>
+  <link rel="stylesheet" th:href="@{/css/test.css}">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="site-title">ПромоНазвание</div>
+    <div class="center-buttons">
+      <a href="#action1" class="center-btn">Каталог</a>
+      <a href="#action2" class="center-btn">Создать свой бампер!</a>
+      <a href="#action3" class="center-btn">Корзина</a>
+    </div>
+    <div class="auth-buttons">
+      <a href="#admin" class="btn admin-btn">Панель администратора</a>
+      <a href="#login" class="btn">Вход</a>
+      <a href="#register" class="btn">Регистрация</a>
+
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- Карусель изображений -->
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="images/loudspeaker.png" alt="Loudspeaker">
+      <img src="images/puzzle.png" alt="Puzzle">
+      <img th:src="@{images/pizza.png}" alt="Pizza">
+    </div>
+    <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+
+</main>
+
+<footer>
+  <p>&copy; 2024 itStepProject</p>
+</footer>
+
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+</body>
+</html>

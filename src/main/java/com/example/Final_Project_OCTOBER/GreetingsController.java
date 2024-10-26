@@ -31,7 +31,7 @@ public class GreetingsController {
         Iterable<ProductType> productTypes = productTypeRepository.findAll();
         model.addAttribute("productTypes", productTypes);
 
-        return "mainPage";
+        return "test";
     }
 
     @PostMapping
