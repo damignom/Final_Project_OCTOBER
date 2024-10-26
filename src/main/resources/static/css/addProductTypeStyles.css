@@ -1,0 +1,85 @@
+/* Стили для формы добавления типа продукта */
+.form-container {
+    background-color: #1e1e1e; /* Темный фон для формы */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 20px; /* Отступы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+.form-container label {
+    display: block; /* Блочное отображение меток */
+    margin-bottom: 5px; /* Отступ снизу */
+    font-weight: bold; /* Жирный шрифт */
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+    width: calc(100% - 20px); /* Ширина с учетом отступов */
+    padding: 10px; /* Отступы внутри полей */
+    margin-bottom: 15px; /* Отступ снизу */
+    border-radius: 5px; /* Закругленные углы */
+    border: none; /* Без рамки */
+    background-color: #333; /* Темный фон для полей ввода */
+    color: white; /* Цвет текста */
+}
+
+.form-container input[type="text"]:focus,
+.form-container textarea:focus {
+    outline: none; /* Убираем стандартное выделение */
+    box-shadow: 0 0 5px #ff5722; /* Подсветка при фокусе */
+}
+
+.submit-button {
+    background-color: #008CBA; /* Синий цвет фона кнопки */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    font-size: 18px; /* Размер шрифта */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.submit-button:hover {
+    background-color: #005f7f; /* Темно-синий цвет при наведении */
+}
+
+/* Стили для контейнера с типами продуктов */
+.product-types-container {
+    margin-top: 20px; /* Отступ сверху */
+    display: flex; /* Используем flexbox для расположения карточек */
+    flex-wrap: wrap; /* Позволяем карточкам переноситься на новую строку */
+}
+
+/* Стили для карточек типов продуктов */
+.product-type-card {
+    background-color: #1e1e1e; /* Темный фон для карточек */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 15px; /* Отступы внутри карточки */
+    margin: 10px; /* Отступы между карточками */
+    width: calc(30% - 20px); /* Ширина карточки с учетом отступов */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Тень */
+}
+
+/* Заголовок карточки с кнопкой удаления */
+.card-header {
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    align-items: center; /* Выровнять по вертикали */
+}
+
+/* Стили для кнопки удаления */
+.delete-button {
+    background-color: #ff4d4d; /* Красный цвет фона для кнопки удаления */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 5px 10px; /* Отступы */
+    cursor: pointer; /* Курсор при наведении */
+    font-size: 12px; /* Размер шрифта */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.delete-button:hover {
+    background-color: #e60000; /* Темно-красный цвет при наведении */
+}

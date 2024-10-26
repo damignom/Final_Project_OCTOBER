@@ -1,0 +1,112 @@
+/* Стили для формы добавления товара */
+.form-container {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333; /* Темный фон для полей ввода */
+    color: white; /* Цвет текста */
+}
+
+.form-container input[type="text"]:focus,
+.form-container input[type="number"]:focus,
+.form-container select:focus {
+    outline: none; /* Убираем стандартное выделение */
+    box-shadow: 0 0 5px #ff5722; /* Подсветка при фокусе */
+}
+
+.submit-button {
+    background-color: #008CBA; /* Синий цвет фона кнопки */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    font-size: 18px; /* Размер шрифта */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.submit-button:hover {
+    background-color: #005f7f; /* Темно-синий цвет при наведении */
+}
+
+/* Стили для таблицы */
+.product-table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.product-table th, .product-table td {
+    padding: 15px; /* Отступы внутри ячеек */
+    text-align: center; /* Выравнивание текста по левому краю */
+    border-bottom: 1px solid #444; /* Нижняя граница ячеек */
+}
+
+.product-table th {
+    background-color: #333; /* Темный фон для заголовков */
+    color: #ffffff; /* Цвет текста заголовков */
+}
+
+.product-table tr:nth-child(even) {
+    background-color: #1e1e1e; /* Чередование фона для четных строк */
+}
+
+.product-table tr:hover {
+    background-color: #444; /* Цвет строки при наведении */
+}
+
+.delete-button {
+    background-color: #ff4d4d; /* Красный цвет фона для кнопки удаления */
+    color: white; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 5px 10px; /* Отступы */
+    cursor: pointer; /* Курсор при наведении */
+    font-size: 14px; /* Размер шрифта */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавный переход цвета и анимация */
+}
+
+.delete-button:hover {
+    background-color: #e60000; /* Темно-красный цвет при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.file-upload-container {
+    position: relative; /* Для позиционирования метки */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.file-upload-label {
+    display: inline-block;
+    background-color: #008CBA; /* Цвет фона метки */
+    color: white; /* Цвет текста */
+    padding: 10px 20px; /* Отступы */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+}
+
+.file-upload-label:hover {
+    background-color: #005f7f; /* Темно-синий цвет при наведении */
+}
+
+.file-upload-input {
+    display: none; /* Скрываем стандартный элемент input */
+}
