@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" th:href="@{/css/test.css}">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="site-title">ПромоНазвание</div>
+        <div class="center-buttons">
+            <a href="#action1" class="center-btn">Каталог</a>
+            <a href="#action2" class="center-btn">Создать свой бампер!</a>
+            <a href="#action3" class="center-btn">Корзина</a>
+        </div>
+        <div class="auth-buttons">
+            <a href="#login" class="btn">Вход</a>
+            <a href="#register" class="btn">Регистрация</a>
+
+        </div>
+    </nav>
+</header>
+
+<main>
+    <h1 align="center">Каталог товаров</h1>
+    <p align="center">Здесь вы найдете информацию об интересующем вас продукте</p>
+    <!-- Каталог товаров -->
+    <div class="catalog">
+        <div class="catalog-item">
+            <img src="images/loudspeaker.png" alt="Товар 1">
+            <h2>Товар 1</h2>
+            <p>Описание товара 1.</p>
+            <div class="btn-container">
+                <a href="#buy1" class="btn-buy">Добавить в корзину</a>
+                <a href="#edit" class="btn-edit">Кастомизировать</a>
+            </div>
+        </div>
+        <div class="catalog-item">
+            <img src="images/pizza.png" alt="Товар 2">
+            <h2>Товар 2</h2>
+            <p>Описание товара 2.</p>
+            <div class="btn-container">
+                <a href="#buy2" class="btn-buy">Добавить в корзину</a>
+                <a href="#edit" class="btn-edit">Кастомизировать</a>
+            </div>
+        </div>
+        <div class="catalog-item">
+            <img src="images/puzzle.png" alt="Товар 3">
+            <h2>Товар 3</h2>
+            <p>Описание товара 3.</p>
+            <div class="btn-container">
+                <a href="#buy3" class="btn-buy">Добавить в корзину</a>
+                <a href="#edit" class="btn-edit">Кастомизировать</a>
+            </div>
+        </div>
+        <!-- Добавьте больше товаров по необходимости -->
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 itStepProject</p>
+</footer>
+</body>
+</html>
