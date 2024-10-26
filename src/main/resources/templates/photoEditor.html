@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Навигационная панель</title>
+  <link rel="stylesheet" th:href="@{/css/test.css}">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="site-title">ПромоНазвание</div>
+    <div class="center-buttons">
+      <a href="#action1" class="center-btn">Каталог</a>
+      <a href="#action2" class="center-btn">Создать свой бампер!</a>
+      <a href="#action3" class="center-btn">Корзина</a>
+    </div>
+    <div class="auth-buttons">
+      <a href="#login" class="btn">Вход</a>
+      <a href="#register" class="btn">Регистрация</a>
+
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- Редактор изображений -->
+  <div class="photo-editor">
+    <input type="file" id="upload" accept="image/*">
+    <div class="image-container">
+      <img id="image" src="" alt="Изображение для редактирования" style="display: none;">
+    </div>
+    <label for="resize">Размер:</label>
+    <input type="range" id="resize" min="10" max="100" value="100">
+    <span id="size-value">100%</span>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2024 itStepProject</p>
+</footer>
+
+<script type="text/javascript" th:src="@{/js/main.js}"></script>
+</body>
+</html>
