@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Минимальная высота для фиксации подвала */
+}
+
+header {
+    background-color: #ff8000;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Распределение элементов */
+    align-items: center; /* Вертикальное центрирование */
+    padding: 10px 20px; /* Отступы */
+}
+
+.site-title {
+    font-size: 24px; /* Размер шрифта для названия сайта */
+}
+
+.nav-links {
+    display: flex; /* Горизонтальное расположение ссылок */
+    justify-content: center; /* Центрирование ссылок */
+    flex-grow: 1; /* Занимает оставшееся пространство */
+}
+
+.nav-links .btn {
+    background-color: #808080; /* Серый цвет фона кнопок */
+    color: white; /* Цвет текста */
+    padding: 10px 15px; /* Отступы внутри кнопок */
+    border-radius: 5px; /* Скругление углов */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 10px; /* Отступ между кнопками */
+}
+
+.nav-links .btn:hover {
+    background-color: #696969; /* Темно-серый цвет при наведении */
+}
+
+.nav-links .highlighted {
+    background-color: #505050; /* Более темный серый для выделяющейся кнопки */
+}
+
+.auth-buttons {
+    display: flex; /* Горизонтальное расположение кнопок */
+}
+
+.auth-buttons .btn {
+    margin-left: 10px; /* Отступ между кнопками входа и регистрации */
+}
+
+main {
+    flex-grow: 1; /* Позволяет основному контенту занимать оставшееся пространство */
+    padding: 20px;
+}
+
+.center-buttons {
+    display: flex;
+    justify-content: center; /* Центрирование кнопок */
+    margin-top: 20px; /* Отступ сверху для визуального разделения */
+}
+
+.center-btn {
+    background-color: #808080; /* Серый цвет фона кнопок */
+    color: white; /* Цвет текста */
+    padding: 10px 15px; /* Отступы внутри кнопок */
+    border-radius: 5px; /* Скругление углов */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 10px; /* Отступ между кнопками */
+}
+
+/* Эффект при наведении на кнопки в центре страницы */
+.center-btn:hover {
+    background-color: #696969; /* Темно-серый цвет при наведении */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+}
