@@ -1,86 +1,45 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Минимальная высота для фиксации подвала */
 }
 
-header {
-    background-color: #ff8000;
-    color: white;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between; /* Распределение элементов */
-    align-items: center; /* Вертикальное центрирование */
-    padding: 10px 20px; /* Отступы */
-}
-
-.site-title {
-    font-size: 24px; /* Размер шрифта для названия сайта */
-}
-
-.nav-links {
-    display: flex; /* Горизонтальное расположение ссылок */
-    justify-content: center; /* Центрирование ссылок */
-    flex-grow: 1; /* Занимает оставшееся пространство */
-}
-
-.nav-links .btn {
-    background-color: #808080; /* Серый цвет фона кнопок */
-    color: white; /* Цвет текста */
-    padding: 10px 15px; /* Отступы внутри кнопок */
+.form-container {
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 50px auto; /* Центрирование формы */
+    padding: 20px; /* Отступы внутри контейнера */
+    border: 1px solid #ddd; /* Рамка контейнера */
     border-radius: 5px; /* Скругление углов */
-    text-decoration: none; /* Убираем подчеркивание */
-    margin: 0 10px; /* Отступ между кнопками */
+    background-color: #f9f9f9; /* Цвет фона */
 }
 
-.nav-links .btn:hover {
-    background-color: #696969; /* Темно-серый цвет при наведении */
+h1 {
+    text-align: center; /* Центрирование заголовка */
 }
 
-.nav-links .highlighted {
-    background-color: #505050; /* Более темный серый для выделяющейся кнопки */
+label {
+    display: block; /* Блоковое отображение для меток */
+    margin-top: 10px; /* Отступ сверху для меток */
 }
 
-.auth-buttons {
-    display: flex; /* Горизонтальное расположение кнопок */
+input {
+    width: 100%; /* Ширина полей ввода на всю ширину контейнера */
+    padding: 10px; /* Отступы внутри полей ввода */
+    margin-top: 5px; /* Отступ сверху для полей ввода */
 }
 
-.auth-buttons .btn {
-    margin-left: 10px; /* Отступ между кнопками входа и регистрации */
+button {
+    width: 100%; /* Ширина кнопки на всю ширину контейнера */
+    padding: 10px; /* Отступы внутри кнопки */
+    margin-top: 10px; /* Отступ сверху для кнопки */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку у кнопки */
+    border-radius: 5px; /* Скругление углов кнопки */
 }
 
-main {
-    flex-grow: 1; /* Позволяет основному контенту занимать оставшееся пространство */
-    padding: 20px;
+button:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
 }
 
-.center-buttons {
-    display: flex;
-    justify-content: center; /* Центрирование кнопок */
-    margin-top: 20px; /* Отступ сверху для визуального разделения */
-}
-
-.center-btn {
-    background-color: #808080; /* Серый цвет фона кнопок */
-    color: white; /* Цвет текста */
-    padding: 10px 15px; /* Отступы внутри кнопок */
-    border-radius: 5px; /* Скругление углов */
-    text-decoration: none; /* Убираем подчеркивание */
-    margin: 0 10px; /* Отступ между кнопками */
-}
-
-/* Эффект при наведении на кнопки в центре страницы */
-.center-btn:hover {
-    background-color: #696969; /* Темно-серый цвет при наведении */
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #f1f1f1;
+p {
+    text-align: center; /* Центрирование текста в параграфе */
 }

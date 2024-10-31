@@ -19,8 +19,8 @@
     </div>
     <div class="auth-buttons">
       <a href="/product" class="btn admin-btn">Панель администратора</a>
-      <a href="#login" class="btn">Вход</a>
-      <a href="#register" class="btn">Регистрация</a>
+      <a th:href="@{/login}" class="btn">Вход</a>
+      <a th:href="@{/register}" class="btn">Регистрация</a>
 
     </div>
   </nav>
@@ -34,7 +34,7 @@
     <div id="imageCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img th:src= "@{'/img/' + 2d9f45d4-671c-4828-9807-17b032e4b401.images.jpeg}" width="125%" height="125%">
+          <img th:src= "@{'/images/' + 'pizza.png'}" width="125%" height="125%">
         </div>
         <div class="carousel-item" th:each="product : ${products}">
           <img th:src = "@{'/img/' + ${product.productFilename}} " width="125%" height="125%">
