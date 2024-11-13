@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Добро пожаловать</title>
+  <title>Навигационная панель</title>
   <link rel="stylesheet" th:href="@{/css/test.css}">
 </head>
 <body>
 <header>
   <nav class="navbar">
     <div class="site-title">
-      <a href="/">ПромоНазвание</a>
+      <a href="/">Phone Cases!</a>
     </div>
     <div class="center-buttons">
       <a href="/catalog" class="center-btn">Каталог</a>
@@ -29,12 +29,12 @@
 <main>
   <!-- Карусель изображений -->
   <div class="container mt-5">
-    <h1>Карусель изображений</h1>
+    <h1>Наши товары</h1>
 
     <div id="imageCarousel" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img th:src= "@{'/images/' + 'pizza.png'}" width="125%" height="125%">
+          <img th:src= "@{'/images/' + '1.jpg'}" width="125%" height="125%">
         </div>
         <div class="carousel-item" th:each="product : ${products}">
           <img th:src = "@{'/img/' + ${product.productFilename}} " width="125%" height="125%">
@@ -42,11 +42,11 @@
       </div>
       <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only">Предыдущий</span>
       </a>
       <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+        <span class="sr-only">Следующий</span>
       </a>
     </div>
   </div>
