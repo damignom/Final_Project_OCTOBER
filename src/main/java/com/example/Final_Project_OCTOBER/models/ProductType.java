@@ -13,6 +13,8 @@ public class ProductType {
     private Long id;
     private String typeName;
 
+    private String shortDescription;
+
     @OneToMany(mappedBy = "productType", cascade = CascadeType.ALL)
     private List<Product> products = new ArrayList<>();
 
@@ -37,5 +39,13 @@ public class ProductType {
 
     public void setTypeName(String typeName) {
         this.typeName = typeName;
+    }
+
+    public String getShortDescription() {
+        return shortDescription;
+    }
+
+    public void setShortDescription(String shortDescription) {
+        this.shortDescription = shortDescription;
     }
 }

@@ -1,6 +1,8 @@
 package com.example.Final_Project_OCTOBER;
 
+import com.example.Final_Project_OCTOBER.models.Product;
 import com.example.Final_Project_OCTOBER.models.ProductType;
+import com.example.Final_Project_OCTOBER.repository.ProductRepository;
 import com.example.Final_Project_OCTOBER.repository.ProductTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,17 +15,12 @@ import java.util.Map;
 
 @Controller
 public class GreetingsController {
-    @GetMapping("/greetings")
-    public String greetings(
-            @RequestParam(name = "name", required = false, defaultValue = "World") String name,
-            Model model
-    ){
-        model.addAttribute("name", name);
-        return "greeting";
-    }
 
     @Autowired
     ProductTypeRepository productTypeRepository;
+
+    @Autowired
+    ProductRepository productRepository;
 
     @GetMapping
     public String main (Model model)
@@ -31,28 +28,26 @@ public class GreetingsController {
         Iterable<ProductType> productTypes = productTypeRepository.findAll();
         model.addAttribute("productTypes", productTypes);
 
-        return "mainPage";
+        return "test";
     }
 
-    @PostMapping
-    public String addProductType(@RequestParam String typeName, Model model){
+    @GetMapping("catalog")
+    private String catalog(Model model){
 
-    ProductType productType = new ProductType(typeName);
+        Iterable<Product> products = productRepository.findAll();
+        model.addAttribute("products", products);
 
-    productTypeRepository.save(productType);
-
-    Iterable<ProductType> productTypes = productTypeRepository.findAll();
-        model.addAttribute("productTypes", productTypes);
-        return "main";
+        return "catalog";
     }
 
-    @PostMapping("delete")
-    public String delete(@RequestParam Long idType, Model model){
-        System.out.println(idType);
-        productTypeRepository.deleteById(idType);
+    @GetMapping("cart")
+    private String cart(Model model){
 
-        Iterable<ProductType> productTypes = productTypeRepository.findAll();
-        model.addAttribute("productTypes", productTypes);
-        return "main";
+        Iterable<Product> products = productRepository.findAll();
+        model.addAttribute("products", products);
+
+        return "cart";
     }
+
+
 }

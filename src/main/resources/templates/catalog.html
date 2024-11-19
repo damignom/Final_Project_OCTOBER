@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+    <link rel="stylesheet" th:href="@{/css/test.css}">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="site-title">
+            <a href="/">ПромоНазвание</a>
+        </div>
+        <div class="center-buttons">
+            <a href="/catalog" class="center-btn">Каталог</a>
+            <a href="#action2" class="center-btn">Создать свой бампер!</a>
+            <a href="/cart" class="center-btn">Корзина</a>
+        </div>
+        <div class="auth-buttons">
+            <a href="/product" class="btn admin-btn">Панель администратора</a>
+            <a href="#login" class="btn">Вход</a>
+            <a href="#register" class="btn">Регистрация</a>
+
+        </div>
+    </nav>
+</header>
+
+<main>
+    <h1 align="center">Каталог товаров</h1>
+    <p align="center">Здесь вы найдете информацию об интересующем вас продукте</p>
+    <!-- Каталог товаров -->
+    <div class="catalog" th:each="product : ${products}">
+        <div class="catalog-item">
+            <img th:src = "@{'/img/' + ${product.productFilename}} " width="25%" height="25%">
+            <h2 th:text = "${product.productName}"></h2>
+            <p th:text = "${product.getProductType()}"></p>
+            <div class="btn-container">
+                <a href="#buy1" class="btn-buy">Добавить в корзину</a>
+                <a href="#edit" class="btn-edit">Кастомизировать</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 itStepProject</p>
+</footer>
+</body>
+</html>

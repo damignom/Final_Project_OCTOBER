@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить тип</title>
+    <link rel="stylesheet" th:href="@{/css/addProductTypeStyles.css}"/>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+<header class="header">
+    <h1>Панель администратора</h1>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/catalog">Каталог</a>
+        <a href="/cart">Корзина</a>
+        <a href="/login">Войти</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Добавить тип продукта</h1>
+    <form id="add-product-type-form" class="form-container" method="post" th:action="@{/productType/addType}">
+        <label for="type-name">Название типа:</label>
+        <input type="text" id="type-name" name="productTypeName" placeholder="Введите название типа" required>
+
+        <label for="type-description">Короткое описание:</label>
+        <textarea id="type-description" name="productTypeDescription" placeholder="Введите короткое описание" rows="4" required></textarea>
+
+        <button type="submit" class="submit-button">Добавить тип</button>
+    </form>
+
+    <h2>Существующие типы продуктов</h2>
+    <div id="product-types-container" class="product-types-container">
+        <!-- Здесь будут карточки типов продуктов -->
+        <div class="product-type-card" th:each="productType : ${productTypes}">
+            <div class="card-header">
+                <h3 th:text="${productType.typeName}"></h3>
+                <form method="post" th:action="@{/productType/deleteType}">
+                <button class="delete-button" th:value="${productType.id}" name="productTypeId">x</button>
+                </form>
+            </div>
+            <p th:text="${productType.getShortDescription()}"></p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

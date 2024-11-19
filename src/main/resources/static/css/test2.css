@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    max-width: 400px; /* Максимальная ширина формы */
+    margin: 50px auto; /* Центрирование формы */
+    padding: 20px; /* Отступы внутри контейнера */
+    border: 1px solid #ddd; /* Рамка контейнера */
+    border-radius: 5px; /* Скругление углов */
+    background-color: #f9f9f9; /* Цвет фона */
+}
+
+h1 {
+    text-align: center; /* Центрирование заголовка */
+}
+
+label {
+    display: block; /* Блоковое отображение для меток */
+    margin-top: 10px; /* Отступ сверху для меток */
+}
+
+input {
+    width: 100%; /* Ширина полей ввода на всю ширину контейнера */
+    padding: 10px; /* Отступы внутри полей ввода */
+    margin-top: 5px; /* Отступ сверху для полей ввода */
+}
+
+button {
+    width: 100%; /* Ширина кнопки на всю ширину контейнера */
+    padding: 10px; /* Отступы внутри кнопки */
+    margin-top: 10px; /* Отступ сверху для кнопки */
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку у кнопки */
+    border-radius: 5px; /* Скругление углов кнопки */
+}
+
+button:hover {
+    background-color: #0056b3; /* Темно-синий цвет при наведении */
+}
+
+p {
+    text-align: center; /* Центрирование текста в параграфе */
+}
