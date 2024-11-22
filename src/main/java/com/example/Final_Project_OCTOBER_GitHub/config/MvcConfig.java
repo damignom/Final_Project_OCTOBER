@@ -1,4 +1,4 @@
-package com.example.Final_Project_OCTOBER.config;
+package com.example.Final_Project_OCTOBER_GitHub.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

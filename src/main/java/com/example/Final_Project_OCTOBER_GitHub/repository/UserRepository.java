@@ -1,6 +1,6 @@
-package com.example.Final_Project_OCTOBER.repository;
+package com.example.Final_Project_OCTOBER_GitHub.repository;
 
-import com.example.Final_Project_OCTOBER.models.User;
+import com.example.Final_Project_OCTOBER_GitHub.models.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

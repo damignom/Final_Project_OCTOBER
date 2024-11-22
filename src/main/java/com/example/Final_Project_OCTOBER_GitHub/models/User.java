@@ -1,9 +1,7 @@
-package com.example.Final_Project_OCTOBER.models;
+package com.example.Final_Project_OCTOBER_GitHub.models;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 
 @Entity

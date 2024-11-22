@@ -1,4 +1,4 @@
-package com.example.Final_Project_OCTOBER.models;
+package com.example.Final_Project_OCTOBER_GitHub.models;
 
 import jakarta.persistence.*;
 

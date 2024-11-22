@@ -1,17 +1,15 @@
-package com.example.Final_Project_OCTOBER;
+package com.example.Final_Project_OCTOBER_GitHub;
 
-import com.example.Final_Project_OCTOBER.models.Product;
-import com.example.Final_Project_OCTOBER.models.ProductType;
-import com.example.Final_Project_OCTOBER.repository.ProductRepository;
-import com.example.Final_Project_OCTOBER.repository.ProductTypeRepository;
+import com.example.Final_Project_OCTOBER_GitHub.models.Product;
+import com.example.Final_Project_OCTOBER_GitHub.models.ProductType;
+import com.example.Final_Project_OCTOBER_GitHub.repository.ProductRepository;
+import com.example.Final_Project_OCTOBER_GitHub.repository.ProductTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.Map;
 
 @Controller
 public class GreetingsController {
